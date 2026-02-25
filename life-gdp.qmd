@@ -24,3 +24,4 @@ for i, yr in enumerate(years):
     ax.set_ylabel("Life Expectancy (years)")
 
 plt.show()
+```

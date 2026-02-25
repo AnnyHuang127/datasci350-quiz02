@@ -17,3 +17,4 @@ plt.xlabel("Population (millions, log scale)")
 plt.ylabel("Life Expectancy (years)")
 plt.title("Life Expectancy vs Population")
 plt.show()
+```
