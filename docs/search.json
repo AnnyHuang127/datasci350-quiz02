@@ -9,9 +9,16 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "350quiz02_website",
+    "title": "Gapminder Dataset Website",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "The Gapminder dataset contains information on life expectancy, GDP per capita, and population for 142 countries from 1952 to 2007 at five-year intervals.\n\n\n\nLife Expectancy vs GDP\nLife Expectancy vs Population\nCountry Trends Over Time"
+  },
+  {
+    "objectID": "index.html#welcome",
+    "href": "index.html#welcome",
+    "title": "Gapminder Dataset Website",
+    "section": "",
+    "text": "The Gapminder dataset contains information on life expectancy, GDP per capita, and population for 142 countries from 1952 to 2007 at five-year intervals.\n\n\n\nLife Expectancy vs GDP\nLife Expectancy vs Population\nCountry Trends Over Time"
   },
   {
     "objectID": "about.html",

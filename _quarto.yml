@@ -8,7 +8,12 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: lifeexp-gdp.qmd
+        text: Life Expectancy vs GDP
+      - href: lifeexp-pop.qmd
+        text: Life Expectancy vs Population
+      - href: country-trends.qmd
+        text: Country Trends
 
 format:
   html:

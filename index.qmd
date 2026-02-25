@@ -1,7 +1,13 @@
 ---
-title: "350quiz02_website"
+title: "Gapminder Dataset Website"
 ---
 
-This is a Quarto website.
+## Welcome
+The Gapminder dataset contains information on life expectancy, GDP per capita, and population for 142 countries from 1952 to 2007 at five-year intervals.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+### Explore the Analysis
+
+- [Life Expectancy vs GDP](lifeexp-gdp.html)
+- [Life Expectancy vs Population](lifeexp-pop.html)
+- [Country Trends Over Time](country-trends.html)
+
