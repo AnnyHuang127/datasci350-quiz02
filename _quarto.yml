@@ -8,18 +8,16 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: lifeexp-gdp.qmd
-        text: Life Expectancy vs GDP
-      - href: lifeexp-pop.qmd
-        text: Life Expectancy vs Population
-      - href: country-trends.qmd
-        text: Country Trends
+      - href: life-gdp.qmd
+        text: Life Expectancy and GDP per Capita
+      - href: life-population.qmd
+        text: Life Expectancy and Population
+      - href: country.qmd
+        text: Country Analysis
 
 format:
   html:
-    theme:
-      - cosmo
-      - brand
+    theme: lumen
     css: styles.css
     toc: true
 

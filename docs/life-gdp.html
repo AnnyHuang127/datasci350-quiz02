@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>About – 350quiz02_website</title>
+<title>Life Expectancy and GDP per Capita – 350quiz02_website</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -95,7 +95,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./life-gdp.html"> 
+    <a class="nav-link active" href="./life-gdp.html" aria-current="page"> 
 <span class="menu-text">Life Expectancy and GDP per Capita</span></a>
   </li>  
   <li class="nav-item">
@@ -125,7 +125,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About</h1>
+<h1 class="title">Life Expectancy and GDP per Capita</h1>
 </div>
 
 
@@ -142,7 +142,12 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>About this site</p>
+<p>This page explores the relationship between life expectancy and GDP per capita across countries over time.</p>
+<p>import pandas as pd import matplotlib.pyplot as plt</p>
+<p>gap = pd.read_csv(“gapminder.csv”)</p>
+<p>years = sorted(gap[“year”].unique()) fig, axes = plt.subplots(3, 4, figsize=(14, 9), constrained_layout=True) axes = axes.flatten()</p>
+<p>for i, yr in enumerate(years): ax = axes[i] d = gap[gap[“year”] == yr] ax.scatter(d[“gdp_per_capita”], d[“life_expectancy”], alpha=0.6) ax.set_xscale(“log”) ax.set_title(str(yr)) ax.set_xlabel(“GDP per Capita (log scale)”) ax.set_ylabel(“Life Expectancy (years)”)</p>
+<p>plt.show()</p>
 
 
 

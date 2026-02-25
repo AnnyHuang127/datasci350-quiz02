@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>About – 350quiz02_website</title>
+<title>Country Analysis – 350quiz02_website</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -103,7 +103,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Life Expectancy and Population</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./country.html"> 
+    <a class="nav-link active" href="./country.html" aria-current="page"> 
 <span class="menu-text">Country Analysis</span></a>
   </li>  
 </ul>
@@ -117,15 +117,23 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#life-expectancy" id="toc-life-expectancy" class="nav-link active" data-scroll-target="#life-expectancy">Life expectancy</a></li>
+  <li><a href="#gdp-per-capita" id="toc-gdp-per-capita" class="nav-link" data-scroll-target="#gdp-per-capita">GDP per capita</a></li>
+  <li><a href="#population" id="toc-population" class="nav-link" data-scroll-target="#population">Population</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About</h1>
+<h1 class="title">Country Analysis</h1>
 </div>
 
 
@@ -142,9 +150,26 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>About this site</p>
+<p>This page analyzes how life expectancy, GDP per capita, and population change over time for one country.</p>
+<p>import pandas as pd import matplotlib.pyplot as plt</p>
+<p>gap = pd.read_csv(“gapminder.csv”)</p>
+<p>country_name = “China” # change this to any country in the dataset c = gap[gap[“country”] == country_name].sort_values(“year”)</p>
+<p>fig, axes = plt.subplots(3, 1, figsize=(10, 10), constrained_layout=True)</p>
+<section id="life-expectancy" class="level1">
+<h1>Life expectancy</h1>
+<p>axes[0].plot(c[“year”], c[“life_expectancy”], marker=“o”) axes[0].set_title(f”{country_name}: Life Expectancy Over Time”) axes[0].set_xlabel(“Year”) axes[0].set_ylabel(“Life Expectancy (years)”)</p>
+</section>
+<section id="gdp-per-capita" class="level1">
+<h1>GDP per capita</h1>
+<p>axes[1].plot(c[“year”], c[“gdp_per_capita”], marker=“o”) axes[1].set_yscale(“log”) axes[1].set_title(f”{country_name}: GDP per Capita Over Time”) axes[1].set_xlabel(“Year”) axes[1].set_ylabel(“GDP per Capita (log scale)”)</p>
+</section>
+<section id="population" class="level1">
+<h1>Population</h1>
+<p>axes[2].plot(c[“year”], c[“population_millions”], marker=“o”) axes[2].set_title(f”{country_name}: Population Over Time”) axes[2].set_xlabel(“Year”) axes[2].set_ylabel(“Population (millions)”)</p>
+<p>plt.show()</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

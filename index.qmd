@@ -3,11 +3,11 @@ title: "Gapminder Dataset Website"
 ---
 
 ## Welcome
-The Gapminder dataset contains information on life expectancy, GDP per capita, and population for 142 countries from 1952 to 2007 at five-year intervals.
+The Gapminder dataset contains information on life expectancy, GDP per capita, and population for 142 countries between 1952 and 2007, recorded at five-year intervals.
 
-### Explore the Analysis
+### Explore the Analysis (Pages)
 
-- [Life Expectancy vs GDP](lifeexp-gdp.html)
-- [Life Expectancy vs Population](lifeexp-pop.html)
-- [Country Trends Over Time](country-trends.html)
+- [Life Expectancy and GDP per Capita](life-gdp.html)
+- [Life Expectancy and Population](life-population.html)
+- [Country Analysis](country.html)
 

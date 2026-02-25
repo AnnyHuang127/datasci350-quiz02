@@ -1,0 +1,38 @@
+---
+title: "Country Analysis"
+---
+
+This page analyzes how life expectancy, GDP per capita, and population change over time for one country.
+
+```{python}
+import pandas as pd
+import matplotlib.pyplot as plt
+
+gap = pd.read_csv("gapminder.csv")
+
+country_name = "China"  # change this to any country in the dataset
+c = gap[gap["country"] == country_name].sort_values("year")
+
+fig, axes = plt.subplots(3, 1, figsize=(10, 10), constrained_layout=True)
+
+# Life expectancy
+axes[0].plot(c["year"], c["life_expectancy"], marker="o")
+axes[0].set_title(f"{country_name}: Life Expectancy Over Time")
+axes[0].set_xlabel("Year")
+axes[0].set_ylabel("Life Expectancy (years)")
+
+# GDP per capita
+axes[1].plot(c["year"], c["gdp_per_capita"], marker="o")
+axes[1].set_yscale("log")
+axes[1].set_title(f"{country_name}: GDP per Capita Over Time")
+axes[1].set_xlabel("Year")
+axes[1].set_ylabel("GDP per Capita (log scale)")
+
+# Population
+axes[2].plot(c["year"], c["population_millions"], marker="o")
+axes[2].set_title(f"{country_name}: Population Over Time")
+axes[2].set_xlabel("Year")
+axes[2].set_ylabel("Population (millions)")
+
+plt.show()
+
